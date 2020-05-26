@@ -1,0 +1,26 @@
+<div #backImg class="background-image">
+  <div style="position: absolute;bottom: 10px;left: 10px;font-size: 12px;background-color: rgba(0,0,0,0.5);padding: 3px 10px;border-radius: 30px;color: #999;display: flex;" *ngIf="backImgInfo">
+    <a style="color: #BBB;" href="{{backImgInfo.user.html}}" target="_blank">{{backImgInfo.user.name}}</a>
+    &nbsp;|&nbsp;
+    <a style="color: #EEE;max-width: 170px;overflow: hidden;display: inline-block;white-space: nowrap;text-overflow: ellipsis;" 
+      href="{{backImgInfo.links.html}}" target="_blank">{{backImgInfo.description}}</a>
+  </div>
+</div>
+<!-- background-color: rgba(255,255,255,0.4); -->
+<div style="position: absolute;left: 0px;top: 0px;display: flex;align-items: center;width: 100%;height: 70px;justify-content: space-between;padding: 0px 10px;">
+  <div style="display: flex;align-items: center;">
+    <img src="assets/img/logovcs.svg" style="width: 40px;height: 40px;" />
+    <div style="margin-left: 7px;">
+      <!-- text-shadow: 0px 0px 6px rgba(255,255,255,0.9); -->
+      <div style="font-size: 24px;font-weight: 600;">VideoMeet Demo</div>
+      <div style="font-size: 12px;margin-top: -5px;">Construído con <a style="color: #222;text-decoration:underline" href="">Video Chat Service</a></div>
+    </div>
+  </div>
+  <div style="display: flex;align-items: center;">
+    <a href="" alt="Ver código fuente" title="Ver código fuente"
+      style="display: block;">
+      <img src="assets/img/github.svg" style="width: 30px;height: 30px;" />
+    </a>
+  </div>
+</div>
+<landing-start></landing-start>
