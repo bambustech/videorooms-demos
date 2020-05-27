@@ -17,7 +17,7 @@ export class VideoComponent implements OnInit {
               private renderer: Renderer2, private router: Router) {
     this.globalService.title.next("VideoRooms - En sala");
     this.options = {
-      server: "https://stg2.tingelmar.com",
+      server: environment.production ? undefined : "http://localhost:8888",
       showFirstParticipantMsg: true
     }
 
@@ -35,6 +35,6 @@ export class VideoComponent implements OnInit {
   }
 
   joinRoom(token) {
-    this.vService.joinRoom(this.route.snapshot.paramMap.get('token'), "BambusTech");
+    this.vService.joinRoom(this.route.snapshot.paramMap.get('token'), "Demo");
   }
 }
